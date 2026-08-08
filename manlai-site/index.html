@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manlai — Ulaanbaatar to Seoul</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body class="loading">
+
+<div id="preloader">
+  <div class="pl-word mono">Ulaanbaatar → Seoul</div>
+  <div class="pl-bar"><span id="plFill"></span></div>
+</div>
+
+<div id="progress"><span id="progressFill"></span></div>
+<div id="cursor"></div>
+
+<header>
+  <div class="mark">MANLAI — 성균관</div>
+  <div class="nav-right">
+    <nav>
+      <a href="#video" data-i18n="nav_video">Video</a>
+      <a href="#journey" data-i18n="nav_journey">Journey</a>
+      <a href="#skku" data-i18n="nav_skku">SKKU</a>
+      <a href="#learned" data-i18n="nav_learned">Learned</a>
+    </nav>
+    <button id="langToggle" data-i18n="lang_toggle_label" aria-label="Switch language">MN</button>
+  </div>
+</header>
+
+<div id="rail">
+  <div class="dot" data-target="hero"><span class="label" data-i18n="rail_start">Start</span></div>
+  <div class="dot" data-target="video"><span class="label" data-i18n="rail_video">Video</span></div>
+  <div class="dot" data-target="journey"><span class="label" data-i18n="rail_journey">Journey</span></div>
+  <div class="dot" data-target="skku"><span class="label" data-i18n="rail_skku">SKKU</span></div>
+  <div class="dot" data-target="learned"><span class="label" data-i18n="rail_learned">Learned</span></div>
+</div>
+
+<!-- ================= HERO ================= -->
+<section id="hero" class="wrap">
+  <div class="eyebrow mono" data-i18n="hero_eyebrow">Ulaanbaatar → Seoul, one exam at a time</div>
+  <h1 data-i18n-html="hero_title">From Mongolia<br>to <em>Korea</em>.</h1>
+  <p class="sub" data-i18n="hero_sub">I'm Manlai. This is the record of how I prepared for Mongolia's national graduation exam, got an IELTS score, applied to Korean universities from scratch, and ended up studying at SKKU — plus what SKKU actually is, for anyone weighing the same route.</p>
+
+  <div class="route reveal">
+    <svg viewBox="0 0 640 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path class="route-path" d="M40,120 C160,40 260,150 340,80 C420,20 500,110 590,50"
+        stroke="#c69a44" stroke-width="1.5" stroke-linecap="round"/>
+      <circle cx="40" cy="120" r="5" fill="#a5372f"/>
+      <circle cx="590" cy="50" r="5" fill="#2c5f52"/>
+      <text x="18" y="145" class="city-label">ULAANBAATAR</text>
+      <text x="520" y="34" class="city-label">SEOUL</text>
+    </svg>
+  </div>
+
+  <a class="cta" href="#video" data-i18n="hero_cta">Watch the introduction →</a>
+</section>
+
+<!-- ================= VIDEO ================= -->
+<section id="video" class="section-pad">
+  <div class="wrap">
+    <div class="kicker reveal" data-i18n="video_kicker">01 — Introduction</div>
+    <h2 class="section-title reveal" data-i18n="video_title">Hi, I'm Manlai. Here's my story, in my own voice.</h2>
+    <p class="section-intro reveal" data-i18n="video_intro">A short video I recorded myself — the exam, the IELTS, the applications, and why SKKU.</p>
+
+    <div class="video-frame reveal">
+      <!--
+        REPLACE THIS: swap the placeholder div below for a real <video> tag once your
+        file is hosted somewhere, e.g.:
+        <video controls poster="your-poster.jpg">
+          <source src="your-video.mp4" type="video/mp4">
+        </video>
+      -->
+      <div class="placeholder">
+        <strong data-i18n="video_placeholder_strong">[ Your recorded video goes here ]</strong><br>
+        <span data-i18n-html="video_placeholder_sub">Replace this block with a &lt;video&gt; tag pointing to your file, or embed a YouTube/Vimeo link once it's uploaded.</span>
+      </div>
+    </div>
+    <div class="video-caption">
+      <span data-i18n="video_caption_left">RECORDED — SEOUL, KR</span>
+      <span data-i18n="video_caption_right">RUNTIME —:—</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= JOURNEY ================= -->
+<section id="journey" class="section-pad">
+  <div class="wrap">
+    <div class="kicker reveal" data-i18n="journey_kicker">02 — The route</div>
+    <h2 class="section-title reveal" data-i18n="journey_title">Three tests, one application season.</h2>
+    <p class="section-intro reveal" data-i18n="journey_intro">Every stage that had to line up before I could set foot on campus.</p>
+
+    <div class="stage-list">
+      <div class="stage reveal">
+        <div class="num">01</div>
+        <div>
+          <span class="mn-label" data-i18n="stage1_cat">Mongolia</span>
+          <h3>Элсэлтийн ерөнхий шалгалт</h3>
+          <p data-i18n="stage1_desc">Mongolia's national general entrance exam — every graduating student sits it, across core subjects, and the score decides which universities and scholarships are even reachable. How I structured my review, which subjects I prioritized, and what I'd tell someone starting a year out.</p>
+          <div class="tags">
+            <span data-i18n="stage1_tag1">National exam</span>
+            <span data-i18n="stage1_tag2">Core subjects</span>
+            <span data-i18n="stage1_tag3">Score → eligibility</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="stage reveal">
+        <div class="num">02</div>
+        <div>
+          <span class="mn-label" data-i18n="stage2_cat">English proficiency</span>
+          <h3 data-i18n="stage2_title">IELTS preparation</h3>
+          <p data-i18n="stage2_desc">Once the domestic exam was behind me, IELTS became the gatekeeper for applying abroad. How I split time across listening, reading, writing, and speaking, the practice-test rhythm I kept, and the score I needed to clear for Korean university admissions.</p>
+          <div class="tags">
+            <span data-i18n="stage2_tag1">Self-study</span>
+            <span data-i18n="stage2_tag2">Practice tests</span>
+            <span data-i18n="stage2_tag3">Band score target</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="stage reveal">
+        <div class="num">03</div>
+        <div>
+          <span class="mn-label" data-i18n="stage3_cat">Korea</span>
+          <h3 data-i18n="stage3_title">Applying to Korean universities</h3>
+          <p data-i18n="stage3_desc">Building an application from Mongolia with no local guidance office — documents, translated transcripts, personal statements, and deadlines across several schools, SKKU among them.</p>
+          <div class="tags">
+            <span data-i18n="stage3_tag1">Documents</span>
+            <span data-i18n="stage3_tag2">Personal statement</span>
+            <span data-i18n="stage3_tag3">Multiple schools</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="stage reveal">
+        <div class="num">04</div>
+        <div>
+          <span class="mn-label" data-i18n="stage4_cat">Seoul / Suwon</span>
+          <h3 data-i18n="stage4_title">Enrolling at SKKU</h3>
+          <p data-i18n="stage4_desc">Where the paperwork ended and the actual studying began — landing at Sungkyunkwan University and starting coursework.</p>
+          <div class="tags">
+            <span data-i18n="stage4_tag1">Enrollment</span>
+            <span data-i18n="stage4_tag2">New campus</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SKKU ================= -->
+<section id="skku" class="section-pad">
+  <div class="wrap">
+    <div class="kicker reveal" data-i18n="skku_kicker">03 — The school</div>
+    <h2 class="section-title reveal" data-i18n="skku_title">Sungkyunkwan University</h2>
+    <p class="section-intro reveal" data-i18n="skku_intro">Founded in 1398 as Korea's royal Confucian academy, SKKU is the oldest university in Korea — now a modern research university run in close partnership with Samsung, split across a Seoul campus and a Suwon campus.</p>
+
+    <div class="skku-top reveal">
+      <div class="logo-slot">
+        <!-- REPLACE THIS: <img src="your-skku-logo.png" alt="SKKU logo"> -->
+        <span class="txt" data-i18n-html="logo_slot_text">[ Drop the official<br>SKKU logo file here ]</span>
+      </div>
+      <div class="skku-facts">
+        <div class="kr">성균관대학교</div>
+        <p data-i18n-html="skku_facts_desc">Its founding ideology, 수기치인 (Su-Gi-Chi-In) — "perfect yourself, then lead others" — still shapes the school's culture today: rigorous, research-driven, and increasingly international, with close industry ties through Samsung.</p>
+      </div>
+    </div>
+
+    <div class="stat-row reveal">
+      <div class="stat">
+        <div class="num"><span class="count" data-prefix="#" data-target="126">0</span></div>
+        <div class="lbl" data-i18n="stat1_label">QS World Ranking 2026</div>
+        <div class="note" data-i18n="stat1_note">Global ranking across QS's 2026 World University Rankings.</div>
+      </div>
+      <div class="stat">
+        <div class="num"><span class="count" data-prefix="#" data-target="16">0</span></div>
+        <div class="lbl" data-i18n="stat2_label">QS Asia 2026</div>
+        <div class="note" data-i18n="stat2_note">Among 103 ranked Korean and Asian universities.</div>
+      </div>
+      <div class="stat">
+        <div class="num"><span class="count" data-target="1398">0</span></div>
+        <div class="lbl" data-i18n="stat3_label">Founded</div>
+        <div class="note" data-i18n="stat3_note">Oldest university in Korea, 600+ years of history.</div>
+      </div>
+    </div>
+
+    <div class="programs reveal">
+      <h3 data-i18n="programs_heading">What you can actually study here</h3>
+      <div class="accordion" id="accordion">
+        <div class="accordion-item open">
+          <button><span data-i18n-html="program1_title">Business &amp; Global MBA</span> <span class="plus">+</span></button>
+          <div class="panel"><p data-i18n="program1_desc">Korea's first fully English-taught Global MBA, alongside a business school taught largely in English — built for students who aren't arriving fluent in Korean.</p></div>
+        </div>
+        <div class="accordion-item">
+          <button><span data-i18n-html="program2_title">Engineering &amp; Computing</span> <span class="plus">+</span></button>
+          <div class="panel"><p data-i18n="program2_desc">Software, mobile communications, energy engineering, and nanotechnology tracks co-developed with Samsung, based mainly on the Suwon Natural Sciences campus.</p></div>
+        </div>
+        <div class="accordion-item">
+          <button><span data-i18n-html="program3_title">Medicine &amp; Life Sciences</span> <span class="plus">+</span></button>
+          <div class="panel"><p data-i18n="program3_desc">One of Korea's strongest medical programs, affiliated with Samsung Medical Center.</p></div>
+        </div>
+        <div class="accordion-item">
+          <button><span data-i18n-html="program4_title">Humanities &amp; Social Sciences</span> <span class="plus">+</span></button>
+          <div class="panel"><p data-i18n="program4_desc">Eighteen schools and three colleges at the bachelor's level on the Seoul campus, rooted in SKKU's Confucian academic tradition.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LEARNED ================= -->
+<section id="learned" class="section-pad">
+  <div class="wrap">
+    <div class="kicker reveal" data-i18n="learned_kicker">04 — Since arriving</div>
+    <h2 class="section-title reveal" data-i18n="learned_title">What I've actually learned here</h2>
+    <p class="section-intro reveal" data-i18n="learned_intro">Fill this in with your own coursework and takeaways as you go — a few starting points below.</p>
+
+    <div class="learn-grid reveal">
+      <div class="learn-card">
+        <span class="mono" data-i18n="learn1_label">Coursework</span>
+        <h4 data-i18n="learn1_title">Course</h4>
+        <p data-i18n="learn1_desc">One of the few lessons I learned by studying at SKKU is that if you do everything that you need to do on time, then your school life will be worry free.</p>
+      </div>
+      <div class="learn-card">
+        <span class="mono" data-i18n="learn2_label">Campus life</span>
+        <h4 data-i18n="learn2_title">Campus experience</h4>
+        <p data-i18n="learn2_desc">When I first set foot on campus it wasn't rainbow and sunshine like I had expected. The most important thing you need on campus is people who can help you and a way to get information. Information was a vital part of my journey — knowing something and preparing for it kept me from panicking in a lot of situations.</p>
+      </div>
+      <div class="learn-card">
+        <span class="mono" data-i18n="learn3_label">Advice</span>
+        <h4 data-i18n="learn3_title">Advice for the next applicant</h4>
+        <p data-i18n="learn3_desc">Research thoroughly, and remember you're racing against time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <h3 data-i18n="footer_heading">Questions about the process? Reach out.</h3>
+      <div class="foot-note">
+        <span data-i18n="footer_line1">MANLAI</span><br>
+        <span data-i18n="footer_line2">SUNGKYUNKWAN UNIVERSITY</span><br>
+        <span data-i18n="footer_line3">SEOUL / SUWON, KR</span>
+      </div>
+    </div>
+    <div class="rule">
+      <span data-i18n="footer_copyright">© 2026 — PERSONAL SITE</span>
+      <span data-i18n="footer_route">MONGOLIA → KOREA</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js" defer></script>
+</body>
+</html>
